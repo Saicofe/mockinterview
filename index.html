@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordance</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(167, 142, 146);
+        }
+
+        .parent-container {
+            width: 600px;
+            height: 450px;
+            margin-top: 100px;
+            margin-left: 300px;
+            background-color:pink;
+            border: 2px solid white;
+            border-radius: 10px;
+
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        .step{
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            /* background-color:pink; */
+            text-align: center;
+        }
+        
+        #step1:hover{
+            background-color: rgb(233, 25, 60);
+        }
+        #step2:hover{
+            background-color: rgb(233, 25, 60);
+        }
+        #step3:hover{
+            background-color: rgb(233, 25, 60);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="nav">
+            <div class="step" id="step1">step 1</div>
+            <div class="step" id="step2">step 2</div>
+            <div class="step" id="step3">step 3</div>
+        </div>
+        <div id="step1-data" style="margin-top: 10px; padding: 30px;">
+            <h2>step 1</h2>
+            Animals first appear in the fossil record in the late Cryogenian period and diversified in the subsequent
+            Ediacaran period in what is known as the Avalon explosion. Earlier evidence of animals is still
+            controversial; the sponge-like organism Otavia has been. what is known as the Avalon explosion. Earlier evidence of animals is still
+            controversial; the sponge-like organism Otavia has been.
+            <br>
+            <img width="150px" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDo890dsxpB5UCLQFdVBWmK4qVxTrsrLEEUg&s" alt="">
+        </div>
+        <div id="step2-data" style="margin-top:10px; padding: 30px; display: none;">
+            <h2>step 2</h2>
+            The animal kingdom is divided into five infrakingdoms/superphyla, namely Porifera, Ctenophora, Placozoa,
+            Cnidaria and Bilateria. Most living animal species belong to the infrakingdom Bilateria, a highly
+            proliferative clade whose members have a bilaterally symmetric and significantly cephalised body plan, and
+            the vast majority of bilaterians belong to two large superphyla: the protostomes, which includes organisms
+            such as arthropods, molluscs, flatworms, annelids and nematodes;
+            <br>
+            <img width="150px" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFU7U2h0umyF0P6E_yhTX45sGgPEQAbGaJ4g&s" alt="">
+        </div>
+        <div id="step3-data" style="margin-top: 10px; padding: 30px; display: none;">
+            <h2>step 3</h2>
+            Historically, Aristotle divided animals into those with blood and those without. Carl Linnaeus created the
+            first Ernst Haeckel divided the animal kingdom (now synonymous with Animalia) and the Protozoa, single-celled organisms no longer
+            considered animals. In modern times, the biological classification of animals relies on advanced techniques,
+            <br>
+            <img width="150px" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJA32WU4rBpx7maglqeEtt3ot1tPIRWptxA&s" alt="">
+        </div>
+    </div>
+
+    <script>
+
+        const first=document.getElementById("step1");
+        const second=document.getElementById("step2");
+        const third=document.getElementById("step3");
+        const first_data=document.getElementById("step1-data");
+        const second_data=document.getElementById("step2-data");
+        const third_data=document.getElementById("step3-data");
+        console.log(first);
+        console.log(first_data);
+
+        first.addEventListener('click',(e)=>{
+            e.preventDefault();
+            first.style.backgroundColor="pink"
+            second.style.backgroundColor="blue"
+            third.style.backgroundColor="blue"
+            first_data.style.display="block";
+            second_data.style.display="none";
+            third_data.style.display="none";
+            
+        });
+        second.addEventListener('click',(e)=>{
+            e.preventDefault();
+            second.style.backgroundColor="pink"
+            first.style.backgroundColor="blue"
+            third.style.backgroundColor="blue"
+            first_data.style.display="none";
+            second_data.style.display="block";
+            third_data.style.display="none"; 
+            
+        });
+        third.addEventListener('click',(e)=>{
+            e.preventDefault();
+            first.style.backgroundColor="blue"
+            second.style.backgroundColor="blue"
+            third.style.backgroundColor="pink"
+            
+            first_data.style.display="none";
+            second_data.style.display="none";
+            third_data.style.display="block"; 
+            
+            
+        })
+
+
+    </script>
+</body>
+
+</html>
